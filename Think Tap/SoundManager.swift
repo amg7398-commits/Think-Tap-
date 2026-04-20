@@ -16,7 +16,8 @@ class SoundManager {
 
     //  Audio Player
     private var player: AVAudioPlayer?
-
+    private let correctSounds = ["correct", "correct1", "correct2"]
+    private var lastCorrectSound: String? = nil
     // ============================
     //  Play Any Sound
     // ============================
@@ -35,6 +36,14 @@ class SoundManager {
         }
     }
 
+    
+    func playCorrectSound(){
+        let available = correctSounds.filter { $0 != lastCorrectSound }
+        guard let chosen = available.randomElement() else { return }
+        lastCorrectSound = chosen
+        playSound(name: chosen)
+    }
+    
     // ============================
     //  Tick Sound (Timer)
     // ============================

@@ -14,8 +14,8 @@ struct SoundButtonStyle: ButtonStyle {
         configuration.label
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
             .opacity(configuration.isPressed ? 0.85 : 1)
-            .onChange(of: configuration.isPressed) { pressed in
-                if pressed {
+            .onChange(of: configuration.isPressed) { oldValue, newValue in
+                if newValue {
                     SoundManager.shared.playSound(name: "tap")
                 }
             }
