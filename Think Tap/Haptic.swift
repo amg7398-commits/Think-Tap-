@@ -1,5 +1,5 @@
 //
-//  Hapitac.swift
+//  Haptic.swift
 //  ThinkTap
 //
 //  Created by Hussein Alzailaei on 3/14/26.

@@ -1,3 +1,4 @@
+
 //
 //  try3App.swift
 //  try3
@@ -9,10 +10,14 @@ import SwiftUI
 
 @main
 struct ThinkTap: App {
+    
+
     var body: some Scene {
         WindowGroup {
-            StartGameView()
-                .buttonStyle(SoundButtonStyle()) // ✅ Sound for ALL buttons
+            
+                        StartGameView()
+                .buttonStyle(SoundButtonStyle()) //  Sound for ALL buttons
+            
 
         }
     }

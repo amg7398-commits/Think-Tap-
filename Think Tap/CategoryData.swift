@@ -24,15 +24,7 @@ struct TriviaQuestion: Identifiable {
     
 }
 
-struct TriviaQuestion1: Identifiable {
-    let id = UUID()
-    let question: String
-    let options: [String]
-    let correctAnswer: String
-    var isAnswered: Bool = false
-    var wasCorrect: Bool? = nil  // this is for green and gray / correct or incorrect
-    
-}
+
 
 
 
@@ -137,11 +129,11 @@ let fullBoardData: [TriviaCategory] = [
     TriviaQuestion(question: "Which fountain drink is most closely associated with Taco Bell?", options: ["Pepsi", "Baja Blast", "Sierra Mist", "Faygo"], correctAnswer: "Baja Blast"),
     TriviaQuestion(question: "Which orange-flavored soda is commonly found in movie-theater fountain machines?", options: ["Crush", "Fanta", "Sunkist", "All of the above"], correctAnswer: "All of the above")
     ]),
-    TriviaSubcategory(name: "Alcohol", questions: [
-    TriviaQuestion(question: "What type of alcohol is sake?", options: ["Wine", "Beer", "Spirit", "Liqueur"], correctAnswer: "Wine"),
-    TriviaQuestion(question: "What gives red wine its color?", options: ["The grape juice", "Added coloring", "Grape skins", "Oak barrels"], correctAnswer: "Grape skins"),
-    TriviaQuestion(question: "Which grain is most commonly used to make whiskey?", options: ["Rice", "Corn", "Barley", "All of the above"], correctAnswer: "All of the above"),
-    TriviaQuestion(question: "What does ABV stand for on an alcohol label?", options: ["Alcohol Beverage Volume", "Alcohol By Volume", "Average Brew Value", "Alcohol Base Variant"], correctAnswer: "Alcohol By Volume")
+    TriviaSubcategory(name: "Terminology", questions: [
+    TriviaQuestion(question: "What does the culinary term al dente mean?", options: ["Overcooked", "Firm to the bite", "Soft and mushy", "Burnt"], correctAnswer: "Firm to the bite"),
+    TriviaQuestion(question: "What does braising involve?", options: ["Cleaning the kitchen", "Cooking at high heat", "Preparing ingredients", "Serving food"], correctAnswer: "Cooking at high heat"),
+    TriviaQuestion(question: "What is umami often described as?", options: ["Sweet", "Sour", "Bitter", "Savory"], correctAnswer: "Savory"),
+    TriviaQuestion(question: "What does it mean to deglaze a pan?", options: ["Cool it down", "Remove excess oil", "Add liquid to loosen browned bits", "Scrub it clean"], correctAnswer: "Add liquid to loosen browned bits")
     ]),
     TriviaSubcategory(name: "Fast-Food", questions: [
     TriviaQuestion(question: "Which fast-food chain is credited with popularizing the drive-thru?", options: ["McDonald's", "Wendy's", "In-N-Out Burger", "Sonic Drive In"], correctAnswer: "In-N-Out Burger"),
@@ -350,13 +342,13 @@ let fullBoardData: [TriviaCategory] = [
             TriviaSubcategory(name: "Museums", questions: [
                 TriviaQuestion(question: "Which museum in New York is often called the Met?", options: ["Museum of Modern Art", "Guggenheim Museum", "Metropolitan Museum of Art", "Whitney Museum"], correctAnswer: "Metropolitan Museum of Art"),
                 TriviaQuestion(question: "The British Museum is located in which city?", options: ["Dublin", "London", "Edinburgh", "Manchester"], correctAnswer: "London"),
-                TriviaQuestion(question: "Which museum is home to the Mona Lisa?", options: ["British Museum", "Prado Museum", "Louvre Museum", "British Museum"], correctAnswer: "Louvre Museum"),
+                TriviaQuestion(question: "Which museum is home to the Mona Lisa?", options: ["British Museum", "Prado Museum", "Louvre Museum", "The National Gallery Museum"], correctAnswer: "Louvre Museum"),
                 TriviaQuestion(question: "Which museum is famous for its glass pyramid entrance?", options: ["British Museum", "Louvre Museum", "Vatican Museums", "Prado Museum"], correctAnswer: "Louvre Museum")
             ]),
             TriviaSubcategory(name: "Terminology", questions: [
                 TriviaQuestion(question: "What does Fresco mean?", options: ["Painting on dry canvas", "Painting on wet plaster", "Painting with oils", "Painting on glass"], correctAnswer: "Painting on wet plaster"),
                 TriviaQuestion(question: "What is Perspective in art?", options: ["Use of color only", "Creating depth and space", "Mixing materials", "Carving technique"], correctAnswer: "Creating depth and space"),
-                TriviaQuestion(question: "What does Medium refer to?", options: ["The size of artwork", "The materials used to create art", "The price of art", "The artist's mood"], correctAnswer: "The materials used to create art?"),
+                TriviaQuestion(question: "What does Medium refer to?", options: ["The size of artwork", "The materials used to create art", "The price of art", "The artist's mood"], correctAnswer: "The materials used to create art"),
                 TriviaQuestion(question: "What is Composition in art?", options: ["The cost of artwork", "The arrangmenet of elements", "The artist's biography", "The frame style"], correctAnswer: "The arrangmenet of elements")
             ])
         ]),
@@ -370,10 +362,10 @@ let fullBoardData: [TriviaCategory] = [
                 TriviaQuestion(question: "What is the term for a room primarily used for cooking in a house?", options: ["Living room", "Kitchen", "Bathroom", "Bedroom"], correctAnswer: "Kitchen")
             ]),
                 TriviaSubcategory(name: "Garden", questions: [
-                    TriviaQuestion(question: "Which gardening technique involves growing plants with soil?", options: ["Hydroponics", "Mulching", "Aeration", "Crop rotation"], correctAnswer: "Hydroponics"),
+                    TriviaQuestion(question: "Which gardening technique involves growing plants without soil?", options: ["Hydroponics", "Mulching", "Aeration", "Crop rotation"], correctAnswer: "Hydroponics"),
                     TriviaQuestion(question: "Which type of plant lives for more than two years?", options: ["Annual", "Biennial", "Perennial", "Seasonal"], correctAnswer: "Perennial"),
                     TriviaQuestion(question: "Which flower is traditionally associated with spring and bulbs?", options: ["Tulip", "Rose", "Sunflower", "Daisy"], correctAnswer: "Tulip"),
-                    TriviaQuestion(question: "Which garedn tool is used to dig small holes for planting seeds or bulbs?", options: ["Rake", "Trowel", "Hoe", "Shovel"], correctAnswer: "Trowel")
+                    TriviaQuestion(question: "Which garden tool is used to dig small holes for planting seeds or bulbs?", options: ["Rake", "Trowel", "Hoe", "Shovel"], correctAnswer: "Trowel")
             ]),
             TriviaSubcategory(name: "Hobbies", questions: [
                 TriviaQuestion(question: "Which hobby involves observing and identifying birds in their natural habitat?", options: ["Hiking", "Birdwatching", "Fishing", "Gardening"], correctAnswer: "Birdwatching"),
@@ -467,326 +459,326 @@ let fullBoardData: [TriviaCategory] = [
 // SUDDEN TRIVIA QUESTIONS
 // @@@@@@@@@@@@@@@@@@@@@
 
-let suddenTriviaQuestions: [TriviaQuestion1] = [
+let suddenTriviaQuestions: [TriviaQuestion] = [
     // ------------------ Entertainment ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What color is the original PlayStation logo's P?",
         options: ["Red","Yellow","Green","Blue"],
         correctAnswer: "Red"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Live Aid was a benefit concert in 1985, played in London and Philadelphia simultaneously, which artist performed at both venues?",
         options: ["Phil Collins","Eric Clapton","David Bowie","Queen"],
         correctAnswer: "Phil Collins"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "In Chinatown (1974), what seemingly mundane item does Jake Gittes find in the saltwater pond that becomes a crucial piece of evidence?",
         options: ["A watch","A pair of sunglasses","A wedding ring","A fountain pen"],
         correctAnswer: "A pair of sunglasses"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What is the registry number of the USS Enterprise in Star Trek: The Original Series?",
         options: ["NCC-1701","NCC-1764","NCC-1031","NCC-74656"],
         correctAnswer: "NCC-1701"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "In the 1985 NBA Draft, who was selected before Michael Jordan?",
         options: ["Hakeem and Sam Bowie","Patrick Ewing and Chris Mullin","Charles Barkley and John Stockton","Karl Malone and Clyde Drexler"],
         correctAnswer: "Hakeem and Sam Bowie"
     ),
     
     // ------------------ Useless Facts ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What color is Coca-Cola before food coloring is added?",
         options: ["Clear","Brown","Green","Yellow"],
         correctAnswer: "Yellow"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Why do teens often prefer texting over talking face-to-face?",
         options: ["It feels less emotionally intense","It’s faster","It gives them more control","All of the above"],
         correctAnswer: "All of the above"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which tool was so valuable in ancient times that it was sometimes buried?",
         options: ["Hammer","Chiesel","Axe","Saw"],
         correctAnswer: "Axe"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which Detroit landmark was the first major roadway in the world paved entirely with concrete?",
         options: ["Woodward Ave","Jefferson Avenue","Grand River Avenue","Michigan Ave"],
         correctAnswer: "Woodward Ave"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which global company was nearly named Cadabra before changing its name?",
         options: ["Apple","Amazon","Alibaba","eBay"],
         correctAnswer: "Amazon"
     ),
 
     // ------------------ Food & Drink ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which restaurant is famous for its endless pancakes promotion?",
         options: ["Denny’s","IHOP","Cracker Barrel","Perkins"],
         correctAnswer: "IHOP"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which fountain drink originated in Waco, Texas?",
         options: ["Dr. Pepper","Big Red","Root Beer","Mr. Pibb"],
         correctAnswer: "Dr. Pepper"
     ),
-    TriviaQuestion1(
-        question: "Which beer is known for its dark color and roasted flavor?",
-        options: ["Pilsner","Lager","Stout","Wheat beer"],
-        correctAnswer: "Stout"
+    TriviaQuestion(
+        question: "What is zesting?",
+        options: ["Juicing fruit","Removing the outer peel of citrus fruit","Drying herbs","Adding spices"],
+        correctAnswer: "Removing the outer peel of citrus fruit"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What fast-food chain is known for its secret menu animal-style items?",
         options: ["Five Guys","Shake Shack","In-N-Out Burger","Whataburger"],
         correctAnswer: "In-N-Out Burger"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which chocolate brand is known for producing ultra-luxury, hand crafted chocolates?",
         options: ["Lindt","Godiva","La Madeline au Truffe","Ferrero Rocher"],
         correctAnswer: "La Madeline au Truffe"
     ),
 
     // ------------------ Geographic ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What city is built on more than 100 islands connected by bridges?",
         options: ["Copenhagen","Helsinki","Stockholm","Oslo"],
         correctAnswer: "Stockholm"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which school is located in Ithaca, New York?",
         options: ["Syracuse University","University at Buffalo","Cornell University","Colgate University"],
         correctAnswer: "Cornell University"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which country is both in Europe and Asia?",
         options: ["Greece","Turkey","Italy","Bulgaria"],
         correctAnswer: "Turkey"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which U.S. state has the highest population?",
         options: ["Texas","New York","Florida","California"],
         correctAnswer: "California"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which language is mainly spoken in South Korea?",
         options: ["Japanese","Mandarin","Korean","Vietnamese"],
         correctAnswer: "Korean"
     ),
     
     // ------------------ General ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which celebrity couple is known by the nickname Bennifer?",
         options: ["Brad Pitt & Angelina Jolie", "Justin Bieber & Hailey Bieber", "Ben Affleck & Jennifer Lopez", "Ryan Reynolds & Blake Lively"],
         correctAnswer: "Ben Affleck & Jennifer Lopez"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which marine animal is known for its intelligence and ability to use tools?",
         options: ["Shark", "Dolphin", "Octopus", "Whale"],
         correctAnswer: "Octopus"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which superhero is known for the phrase I am Groot?",
         options: ["Rocket Raccoon", "Hulk", "Thor", "Groot"],
         correctAnswer: "Groot"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "In which year did the French Revolution begin?",
         options: ["1776", "1789", "1804", "1812"],
         correctAnswer: "1789"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which holiday celebrates the end of fasting during Ramadan?",
         options: ["Eid al-Adha", "Mawlid", "Eid al-Fitr", "Ashura"],
         correctAnswer: "Eid al-Fitr"
         ),
     
     // ------------------ Science ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which theory suggests that a small group of elites holds the most power in society?",
         options: ["Pluralism", "Elitism", "Populism", "Federalism"],
         correctAnswer: "Elitism"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What is the term for a law passed by a legislative body?",
         options: ["Constiution", "Statute", "Precedent", "Ordinance"],
         correctAnswer: "Statute"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which planet is known for having extreme winds and a blue appearance?",
         options: ["Neptune", "Earth", "Saturn", "Jupiter"],
         correctAnswer: "Neptune"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which type of blood cells help fight infections?",
         options: ["Red Blood Cells", "White Blood Cells", "Platelets", "Plasma"],
         correctAnswer: "White Blood Cells"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which element is most abundant in Earth's crust?",
         options: ["Oxygen", "Silicon", "Aluminum", "Iron"],
         correctAnswer: "Oxygen"
     ),
     
     // ------------------ Travel ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which type of bike is ideal for carrying luggage on trips?",
         options: ["BMX Bike", "Road Bike", "Touring Bike", "Mountain Bike"],
         correctAnswer: "Touring Bike"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What type of road is designed for high-speed traffic?",
         options: ["Boulevard", "Freeway", "Alley", "Street"],
         correctAnswer: "Freeway"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What instrument is primarily used to measure an aircraft's altitude?",
         options: ["Compass", "Altimeter", "Airspeed Indicator", "Gyroscope"],
         correctAnswer: "Altimeter"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which U.S. city operates the largest light rail system by route length?",
         options: ["Los Angeles", "Dallas", "San Francisco", "Boston"],
         correctAnswer: "Dallas"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What type of shoes is recommended for long-distance walking and trekking?",
         options: ["Flip-flops", "Running shoes", "Hiking boots", "Dress shoes"],
         correctAnswer: "Hiking boots"
     ),
     
     // ------------------ Technology ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What is the purpose of Airplane Mode on a smartphone?",
         options: ["Improve battery life only", "Disable all wireless communications", "Boost signal strength", "Enable GPS tracking"],
         correctAnswer: "Disable all wireless communications"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which storage device has no moving parts?",
         options: ["HDD", "SSD", "CD-ROM", "Floppy Disk"],
         correctAnswer: "SSD"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which company created the Internet Explorer browser?",
         options: ["Apple", "Netscape", "Microsoft", "IBM"],
         correctAnswer: "Microsoft"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which person founded Instagram?",
         options: ["Evan Spiegel", "Kevin Systrom", "Mark Cuban", "Reid Hoffman"],
         correctAnswer: "Kevin Systrom"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What does BIOS stand for?",
         options: ["Basic Input Output System", "Binary Integrated Operating Setup", "Basic Internal Operating Software", "Built-In Opearting System"],
         correctAnswer: "Basic Input Output System"
     ),
     
     // ------------------ Art ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Who painted The Birth of Venus?",
         options: ["Leonardo da Vinci", "Michelangelo", "Sandro Botticelli", "Raphael"],
         correctAnswer: "Sandro Botticelli"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which movement is associated with dreamlike imagery?",
         options: ["Realism", "Surrealism", "Romanticism", "Neoclassicism"],
         correctAnswer: "Surrealism"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which law enforcement organization maintains a stolen art database worldwide?",
         options: ["FBI only", "Interpol", "NASA", "UNESCO"],
         correctAnswer: "Interpol"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "The Prado Museum is located in which country?",
         options: ["Italy", "Spain", "Portugal", "France"],
         correctAnswer: "Spain"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What does Canvas refer to?",
         options: ["A type of brush", "A painting surface", "A color palette", "A sculpture tool"],
         correctAnswer: "A painting surface"
     ),
     
     // ------------------ Lifestyle ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which type of flooring is made by pressing together layers of wood veneer?",
         options: ["Laminate", "Hardwood", "Tile", "Carpet"],
         correctAnswer: "Laminate"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which insect is considered beneficial for pollinating garden plants?",
         options: ["Aphids", "Ladybugs", "Bees", "Grasshoppers"],
         correctAnswer: "Bees"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which hobby focuses on folding paper into artistic shapes?",
         options: ["Scrapbooking", "Origami", "Calligraphy", "Weaving"],
         correctAnswer: "Origami"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which nutrient is the main source of energy for the body?",
         options: ["Protein", "Fat", "Carbohydrates", "Vitamins"],
         correctAnswer: "Carbohydrates"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What is the fashion term for clothing inspired by previous decades?",
         options: ["Capsule collection", "Vintage", "Couture", "Fast fashion"],
         correctAnswer: "Vintage"
     ),
     
     // ------------------ Famous Quotes ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which celebrity said, Don't dream your life, live your dream?",
         options: ["Dolly Parton", "Ellen DeGeneres", "Will Smith", "Oprah Winfrey"],
         correctAnswer: "Oprah Winfrey"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which author wrote, You never really understand a person until you consider things from his point of view?",
         options: ["Mark Twain", "Harper Lee", "J.D. Salinger", "F. Scott Fitzgerald"],
         correctAnswer: "Harper Lee"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Speak softly and carry a big stick is a quote from which U.S. President?",
         options: ["Theodore Roosevelt", "Woodrow Wilson", "Franklin D. Roosevelt", "Abraham Lincoln"],
         correctAnswer: "Theodore Roosevelt"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which film features, Say hello to my little friend?",
         options: ["Scarface", "Casino", "Heat", "Goodfellas"],
         correctAnswer: "Scarface"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Who wrote, Happiness is the highest good?",
         options: ["Aristotle", "Epicurus", "Stoics", "Plato"],
         correctAnswer: "Aristotle"
     ),
     
     // ------------------ Kids ------------------
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What do students usually bring their homework in?",
         options: ["Pencil case", "Backpack", "Binder", "Folder"],
         correctAnswer: "Backpack"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "What has a neck but no head?",
         options: ["Bottle", "Guitar", "Shirt", "Vase"],
         correctAnswer: "Bottle"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "In Green Eggs and Ham, who refuses to eat the green eggs and ham at first?",
         options: ["Sam-I-Am", "The narrator", "Horton", "Max"],
         correctAnswer: "The narrator"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which legend says if you chant her name three times in front of a mirror, she appears?",
         options: ["La Llorona", "Slender Man", "Bloody Mary", "Bigfoot"],
         correctAnswer: "Bloody Mary"
     ),
-    TriviaQuestion1(
+    TriviaQuestion(
         question: "Which pet can change color to hide or blend in with its surroundings?",
         options: ["Dog", "Fish", "Chameleon", "Rabbit"],
         correctAnswer: "Chameleon"
@@ -795,379 +787,3 @@ let suddenTriviaQuestions: [TriviaQuestion1] = [
 
 
 
-//import SwiftUI
-//// ===========
-//// MODELS
-//// ===========
-//
-//struct TriviaQuestion: Identifiable {
-//    let id = UUID()
-//    let question: String
-//    let options: [String]
-//    let correctAnswer: String
-//    var isAnswered: Bool = false
-//    var wasCorrect: Bool? = nil  // this is for green and gray / correct or incorrect
-//    
-//}
-//
-//
-//
-//struct TriviaSubcategory: Identifiable {
-//    let id = UUID()
-//    let name: String
-//    var questions: [TriviaQuestion]
-//}
-//
-//struct TriviaCategory: Identifiable {
-//    let id = UUID()
-//    let name: String
-//    let imageName: String
-//    var subcategories: [TriviaSubcategory]
-//}
-//
-//// =======================
-////  FULL BOARD DATA (4x5x4)
-//// ==========================
-//
-//let fullBoardData: [TriviaCategory] = [
-//
-//    // ------------------ Entertainment ------------------
-//    TriviaCategory(name: "Entertainment", imageName: "Entertainment", subcategories: [
-//        TriviaSubcategory(name: "Video Games", questions: [
-//            TriviaQuestion(question: "What was the name of the major video game console released in 1985?", options: ["Atari 2600 Game System", "Sega Master System","Playstation","Nintendo Entertainment System (NES)"], correctAnswer: "Nintendo Entertainment System (NES)"),
-//            TriviaQuestion(question: "What company is behind the Playstation brand?", options: ["Microsoft", "Apple", "Sony", "Nintendo"], correctAnswer: "Sony"),
-//            TriviaQuestion(question: "What color is Pac-Man?", options: ["Green", "Red", "Yellow", "Blue"], correctAnswer: "Yellow"),
-//            TriviaQuestion(question: "What genre of video game is Super Mario?", options: ["Action", "Platformer", "Strategy", "RPG"], correctAnswer: "Platformer")
-//        ]),
-//        TriviaSubcategory(name: "Music", questions: [
-//            TriviaQuestion(question: "What year was the cassette tape introduced as a medium for recorded music in the USA?", options: ["1961", "1965", "1966", "1968"], correctAnswer: "1966"),
-//            TriviaQuestion(question: "What was the first song to break the 3 minute mark on FM radio in the 70’s?", options: ["Won’t Get Fooled Again” by The Who", "American Pie” by Don McClean", "Aqualung” by Jethro Tull", "Like a Rolling Stone” by Bob Dylan"], correctAnswer: "Like a Rolling Stone” by Bob Dylan"),
-//            TriviaQuestion(question: "What name is Robert Weston Smith better known as?", options: ["Dr. Demento", "Wolfman Jack", "Murray the “K”", "The Big Bopper"], correctAnswer: "Wolfman Jack"),
-//            TriviaQuestion(question: "Which 70’s/80’s Rock Icons started their musical journey known as Tradwinds 4?", options: ["Fleetwood Mac", "Kansas", "Deep Purple", "Styx"], correctAnswer: "Styx")
-//        ]),
-//        TriviaSubcategory(name: "Movies", questions: [
-//            TriviaQuestion(question: "In the movie E.T.  what candy does Elliott use to lure E.T.?", options: ["M&M’s ", "Skittles", "SReese’s Pieces", "Smarties"], correctAnswer: "Reese’s Pieces"),
-//            TriviaQuestion(question: "What was the name of the mechinal Shark in the 1975 movie “Jaws”?", options: ["Chomper", "Bruce", "Sharky", "Fred"], correctAnswer: "Bruce"),
-//            TriviaQuestion(question: "What is the first rule of Fight Club in the 1999 Film?", options: ["Always protect yourself", "You do not talk about Fight Club", "No shirt, No Shoes", "Fights go on as long as they have to"], correctAnswer: "You do not talk about Fight Club"),
-//            TriviaQuestion(question: "In “The Lord of the Rings: The Fellowship of the Ring”, what is the name of Gandalf’s horse?", options: ["Shadowfax", "Brego", "Asfaloth", "Bill"], correctAnswer: "Shadowfax")
-//        ]),
-//        TriviaSubcategory(name: "TV", questions: [
-//            TriviaQuestion(question: "What is the name of the coffee shop in Friends?", options: ["Java Joe", "Central Perk", "The Daily Grind", "Cafe Central"], correctAnswer: "Central Perk"),
-//            TriviaQuestion(question: "In “Stranger Things”, what is Eleven’s favorite food?", options: ["Pizza", "Eggo Waffles", "Chicken nuggets", "French fries"], correctAnswer: "Eggo Waffles"),
-//            TriviaQuestion(question: "In “ The Office US, what city is Dunder Mifflin branch located in?", options: ["Pittsburgh", "Philadelphia", "Scranton", "Allentown"], correctAnswer: "Scranton"),
-//            TriviaQuestion(question: "What is the family name in the “ The Simpsons”?", options: ["Jones", "Simpsons", "Smith", "Brown"], correctAnswer: "Simpsons")
-//        ]),
-//        TriviaSubcategory(name: "Sports", questions: [
-//            TriviaQuestion(question: "What baseball player hit 60 home runs in 1927, a record that stood for 34 years?", options: ["Lou Gehrig", "Babe Ruth - Correct", "Jimmie Foxx", "Hank Greenberg"], correctAnswer: "Babe Ruth - Correct"),
-//            TriviaQuestion(question: "What sport does Lebron James play?", options: ["Football", "Basketball", "Baseball", "Soccer"], correctAnswer: "Basketball"),
-//            TriviaQuestion(question: "What do you call it when a bowler makes three strikes in a row?", options: ["A triple", "A perfect Game", "A turkey", "A hat trick"], correctAnswer: "A triple"),
-//            TriviaQuestion(question: "How many points is a touchdown worth in football? ", options: ["3", "6", "7", "10"], correctAnswer: "6")
-//        ])
-//    ]),
-//    
-//    //------------- Useless Facts ------------------
-//    TriviaCategory(name: "Useless Facts ", imageName: "useless", subcategories: [
-//    TriviaSubcategory(name: "Random", questions: [
-//    TriviaQuestion(question: "What everyday object was originally lnvented to avoid touching food with your hands?", options: ["Spoon", "Fork", "Napkin", "Plate"], correctAnswer: "Fork"),
-//    TriviaQuestion(question: "What was Elvis Presley’s occupation before he became a rock star?"
-//    , options: [" A cook", "Afarmer", "An inmate" , "A truck driverLion" ], correctAnswer: "A truck driverLion"),
-//    TriviaQuestion(question: "Which animal sleeps the leastamount of time per day?", options: ["Dolphin", "Giraffe", "Horse", "Elephant"], correctAnswer: "Giraffe"),
-//    TriviaQuestion(question: "What everyday item was once made using human hair?", options: ["Toothbrush", "Paintbrush", "Pillow Stuffing", "Violin"], correctAnswer: "Toothbrush")
-//    ]),
-//    TriviaSubcategory(name: "Parenting", questions: [
-//    TriviaQuestion(question: " How many diapers does the average baby use in their first year?", options: ["About 800", "About 1500", "About 2500", "About 3500"], correctAnswer: "About 2500"),
-//    TriviaQuestion(question: "What is the most common first word babies say worldwide?", options: ["Mama", "Dada", "No", "Milk"], correctAnswer: "Dada"),
-//    TriviaQuestion(question: "Why do toddlers often take off their shoes in the worst possible places?", options: ["Shoes feel restrictive", "They like attention", "They forgot they’re wearing them", "It’s a sensory prefence"], correctAnswer: "It’s a sensory prefence"),
-//    TriviaQuestion(question: " What phrase do parents hear most during the teen years?", options: ["Can you help me?", "I don’t know", "“I’m bored”", "“I’m hungrey"], correctAnswer: "I don’t know")
-//    ]),
-//    TriviaSubcategory(name: "Tools", questions: [
-//    TriviaQuestion(question: "What common tool was orginally designed to pull nails, not drive them?", options: ["Hammer", "Wrench", "Screwdriver", "Pliers"], correctAnswer: "Hammer"),
-//    TriviaQuestion(question: "Which tool is named after the sound it makes when used?"
-//    , options: [" Drill", "Chisel", "Saw ", " Level"], correctAnswer: "Saw "),
-//    TriviaQuestion(question: "What material were early measuring tapes made from before metal?", options: ["Leather", "Cotton", "Wood", "Paper"], correctAnswer: "Leather"),
-//    TriviaQuestion(question: "Why are most screw threads twisted to the right?", options: ["It looks better", "Most people are right-handed", " It reduces vibration", "It uses less metal"], correctAnswer: "Most people are right-handed")
-//    ]),
-//    TriviaSubcategory(name: "Locations", questions: [
-//    TriviaQuestion(question: "Which city is known as “The Big Apple”?", options: ["Los Angels", "Chicago", "New York City", "Boston"], correctAnswer: "New York City"),
-//    TriviaQuestion(question: "Which country is shaped like a boot?", options: ["Spain", " Greece", " Italy", "Portugal"], correctAnswer: " Italy"),
-//    TriviaQuestion(question: "Which city has more bridges than Venice?", options: ["Paris", " London", " Hamburg", "Amsterdam"], correctAnswer: " Hamburg"),
-//    TriviaQuestion(question: "What is the only continent without an active volcano?", options: ["Europe", "Africa", "Australia", "Antarctica"], correctAnswer: "Europe")
-//    ]),
-//    TriviaSubcategory(name: "Business", questions: [
-//    TriviaQuestion(question: "Which company started out selling only books online?", options: ["eBay", "Google", "Amazon", "Apple"], correctAnswer: "Amazon"),
-//    TriviaQuestion(question: "What color is most commonly used in fast-food logo because it simulates appetite?", options: ["Blue", "Green", "Red", " Purple"], correctAnswer:"Red"),
-//    TriviaQuestion(question: "Which famous company’s original name was “BackRub”?", options: ["Yahoo", "Google", "Microsoft", " Netflix"], correctAnswer: "Google"),
-//    TriviaQuestion(question: "What was the first product every sold by Nintendo before video games?", options: ["Board games", "Toys", "Playing cards", "Electronic"], correctAnswer: "Playing cards")
-//    ])
-//    ]),
-//
-//
-//    
-//    
-//    // ------------------ Food & Drink ------------------
-//    TriviaCategory(name: "Food & Drink", imageName: "FoodDrink", subcategories: [
-//    TriviaSubcategory(name: "Restaurants", questions: [
-//    TriviaQuestion(question: "Which restaurant is famous for its Golden Arches logo?", options: ["Burger King", "Wendy's", "McDonald's", "KFC"], correctAnswer: "McDonald's"),
-//    TriviaQuestion(question: "Which restaurant is best known for bottomless breadsticks?", options: ["Olive Garden", "Pizza Hut", "Domino's", "Papa John's"], correctAnswer: "Olive Garden"),
-//    TriviaQuestion(question: "Which restaurant chain is associated with the slogan Finger Lickin' Good?", options: ["Popeyes", "Chick-fil-A", "KFC", "Church's Chicken"], correctAnswer: "KFC"),
-//    TriviaQuestion(question: "Which restaurant is famous for its footlong sandwiches?", options: ["Panera Bread", "Jimmy John's", "Subway", "Jersey Mike's"], correctAnswer: "Subway")
-//    ]),
-//    TriviaSubcategory(name: "Fountain Drinks", questions: [
-//    TriviaQuestion(question: "Which soft drink was originally created as a medicinal tonic in 1885?", options: ["Root beer", "Pepsi", "Coca-Cola", "7UP"], correctAnswer: "Coca-Cola"),
-//    TriviaQuestion(question: "Which fountain drink is flavored with 23 diffewrent flavors?", options: ["Mountain Dew", "Dr. Pepper", "Fanta", "Vernor's"], correctAnswer: "Dr. Pepper"),
-//    TriviaQuestion(question: "Which fountain drink is most closely associated with Taco Bell?", options: ["Pepsi", "Baja Blast", "Sierra Mist", "Faygo"], correctAnswer: "Baja Blast"),
-//    TriviaQuestion(question: "Which orange-flavored soda is commonly found in movie-theater fountain machines??", options: ["Crush", "Fanta", "Sunkist", "All of the above"], correctAnswer: "All of the above")
-//    ]),
-//    TriviaSubcategory(name: "Alcohol", questions: [
-//    TriviaQuestion(question: "What type of alcohol is sake?", options: ["Wine", "Beer", "Spirit", "Liqueur"], correctAnswer: "Wine"),
-//    TriviaQuestion(question: "What gives red wine its color?", options: ["The grape juice", "Added coloring", "Grape skins", "Oak barrels"], correctAnswer: "Grape skins"),
-//    TriviaQuestion(question: "Which grain is most commonly used to make whiskey?", options: ["Rice", "Corn", "Barley", "All of the above"], correctAnswer: "All of the above"),
-//    TriviaQuestion(question: "What does ABV stand for on an alcohol label?", options: ["Alcohol Beverage Volume", "Alcohol By Volume", "Average Brew Value", "Alcohol Base Variant"], correctAnswer: "Alcohol By Volume")
-//    ]),
-//    TriviaSubcategory(name: "Fast-Food", questions: [
-//    TriviaQuestion(question: "Which fast-food chain is credited with popularizing the drive-thru?", options: ["McDonald's", "Wendy's", "In-N-Out Burger", "Sonic Drive In"], correctAnswer: "In-N-Out Burger"),
-//    TriviaQuestion(question: "Which chain iintroduced the Crunchwrap Supreme?", options: ["Taco Bell", "Chipolte", "Del Taco", "Qdoba"], correctAnswer: "Taco Bell"),
-//    TriviaQuestion(question: "What meat is traditionally used in a classic Arby's sandwich?", options: ["Turkey", "Roast beef", "Ham", "Brisket"], correctAnswer: "Roast beef"),
-//    TriviaQuestion(question: "What is the signature sauce on a Big Mac called?", options: ["Special sauce", "Big sauce", "Mac sauce", "Secret sauce"], correctAnswer: "Special sauce")
-//    ]),
-//    TriviaSubcategory(name: "Luxury Food", questions: [
-//    TriviaQuestion(question: "Which type of caviar is considered the most expensive in the world?", options: ["Osetra", "Sevruga", "Beluga", "Hackleback"], correctAnswer: "Beluga"),
-//    TriviaQuestion(question: "Kobe beef originates from which country?", options: ["United States", "France", "Japan", "Australia"], correctAnswer: "Japan"),
-//    TriviaQuestion(question: "What precious metal is sometimes used as a garnish in luxury desserts and cocktails?", options: ["Platinum", "Silver", "Copper", "Gold"], correctAnswer: "Gold"),
-//    TriviaQuestion(question: "Which luxury seafood is known for its long legs and sweet meat?", options: ["Lobster", "King crab", "Snow crab", "Blue crab"], correctAnswer: "King crab")
-//    ])
-//    ]),
-//
-//
-//    
-//   
-//    // ------------------ Geography ------------------
-//        TriviaCategory(name: "Geography", imageName: "geographic", subcategories: [
-//            TriviaSubcategory(name: "Countries", questions: [
-//                TriviaQuestion(question: "Which country has the largest land area in the world?", options: ["Canada", "China", "United States", "Russia"], correctAnswer: "Russia"),
-//                TriviaQuestion(question: "What is the smallest country in the world by land area?", options: ["Monaco", "San Marino", "Vatican City", "Liechtenstein"], correctAnswer: "Vatican City"),
-//                TriviaQuestion(question: "Which country has the most time zones?", options: ["Russia", "United States", "France", "Australia"], correctAnswer: "France"),
-//                TriviaQuestion(question: "Which country contains the most lakes?", options: ["Finland", "Sweden", "Canada", "Norway"], correctAnswer: "Canada")
-//            ]),
-//            TriviaSubcategory(name: "States", questions: [
-//                TriviaQuestion(question: "Which U.S. state is the largest by land area?", options: ["Texas", "California", "Alaska", "Montana"], correctAnswer: "Alaska"),
-//                TriviaQuestion(question: "What is the smallest U.S. state by land area?", options: ["Delaware", "Rhode Island", "Connecticut", "New Jersey"], correctAnswer: "Rhode Island"),
-//                TriviaQuestion(question: "Which U.S. state is known as the “Sunshine State”?", options: ["California", "Arizona", "Florida", "Nevada"], correctAnswer: "Florida"),
-//                TriviaQuestion(question: "Which state was the last to join the United States?", options: ["Alaska", "Hawaii", "Arizona", "New Mexico"], correctAnswer: "Hawaii")
-//            ]),
-//            TriviaSubcategory(name: "Language", questions: [
-//                TriviaQuestion(question: "Which language has the most native speakers worldwide?", options: ["English", "Spanish", "Mandarin Chinese", "Hindi"], correctAnswer: "Mandarin Chinese"),
-//                TriviaQuestion(question: "Which country has the most official languages?", options: ["Canada", "India", "Switzerland", "South Africa"], correctAnswer: "South Africa"),
-//                TriviaQuestion(question: "What language is mainly spoken in Quebec, Canada?", options: ["English", "French", "Spanish", "German"], correctAnswer: "French"),
-//                TriviaQuestion(question: "What language family does English belong to?", options: ["Romance", "Slavic", "Germanic", "Celtic"], correctAnswer: "Germanic")
-//            ]),
-//            TriviaSubcategory(name: "Schools", questions: [
-//                TriviaQuestion(question: "Which university is located in Cambridge, Massachusetts?", options: ["Yale University", "Harvard University", "MIT", "Tufts University"], correctAnswer: "Harvard University"),
-//                TriviaQuestion(question: "Which school is located in Palo Alto, California?", options: ["UC Berkeley", "UCLA", "Stanford University", "Caltech"], correctAnswer: "Stanford University"),
-//                TriviaQuestion(question: "Which school is located in Ann Arbor, Michigan?", options: ["Michigan State University", "University of Michigan", "Wayne State University", "Purdue University"], correctAnswer: "University of Michigan"),
-//                TriviaQuestion(question: "Which university is located in Berkeley, California?", options: ["Stanford University", "UC Berkeley", "UCLA", "UC San Diego"], correctAnswer: "UC Berkeley")
-//            ]),
-//            TriviaSubcategory(name: "Cities", questions: [
-//                TriviaQuestion(question: "Which city is known as “The Big Apple”?", options: ["Los Angeles", "New York City", "Chicago", "Boston"], correctAnswer: "New York City"),
-//                TriviaQuestion(question: "What city is famous for its canals and gondolas?", options: ["Amsterdam", "Bruges", "Venice", "Stockholm"], correctAnswer: "Venice"),
-//                TriviaQuestion(question: "Which city is nicknamed“ The Windy City”?", options: ["Minneapolis", "San Francisco", "Chicago", "Detroit"], correctAnswer: "Detroit"),
-//                TriviaQuestion(question: "Which city was divided by a wall from 1961 to 1989?", options: ["Vienna", "Warsaw", "Prague", "Berlin"], correctAnswer: "Berlin")
-//            ])
-//        ]),
-//    // ------------------ Geography ------------------
-//        TriviaCategory(name: "Geography", imageName: "geographic", subcategories: [
-//            TriviaSubcategory(name: "Countries", questions: [
-//                TriviaQuestion(question: "Which country has the largest land area in the world?", options: ["Canada", "China", "United States", "Russia"], correctAnswer: "Russia"),
-//                TriviaQuestion(question: "What is the smallest country in the world by land area?", options: ["Monaco", "San Marino", "Vatican City", "Liechtenstein"], correctAnswer: "Vatican City"),
-//                TriviaQuestion(question: "Which country has the most time zones?", options: ["Russia", "United States", "France", "Australia"], correctAnswer: "France"),
-//                TriviaQuestion(question: "Which country contains the most lakes?", options: ["Finland", "Sweden", "Canada", "Norway"], correctAnswer: "Canada")
-//            ]),
-//            TriviaSubcategory(name: "States", questions: [
-//                TriviaQuestion(question: "Which U.S. state is the largest by land area?", options: ["Texas", "California", "Alaska", "Montana"], correctAnswer: "Alaska"),
-//                TriviaQuestion(question: "What is the smallest U.S. state by land area?", options: ["Delaware", "Rhode Island", "Connecticut", "New Jersey"], correctAnswer: "Rhode Island"),
-//                TriviaQuestion(question: "Which U.S. state is known as the “Sunshine State”?", options: ["California", "Arizona", "Florida", "Nevada"], correctAnswer: "Florida"),
-//                TriviaQuestion(question: "Which state was the last to join the United States?", options: ["Alaska", "Hawaii", "Arizona", "New Mexico"], correctAnswer: "Hawaii")
-//            ]),
-//            TriviaSubcategory(name: "Language", questions: [
-//                TriviaQuestion(question: "Which language has the most native speakers worldwide?", options: ["English", "Spanish", "Mandarin Chinese", "Hindi"], correctAnswer: "Mandarin Chinese"),
-//                TriviaQuestion(question: "Which country has the most official languages?", options: ["Canada", "India", "Switzerland", "South Africa"], correctAnswer: "South Africa"),
-//                TriviaQuestion(question: "What language is mainly spoken in Quebec, Canada?", options: ["English", "French", "Spanish", "German"], correctAnswer: "French"),
-//                TriviaQuestion(question: "What language family does English belong to?", options: ["Romance", "Slavic", "Germanic", "Celtic"], correctAnswer: "Germanic")
-//            ]),
-//            TriviaSubcategory(name: "Schools", questions: [
-//                TriviaQuestion(question: "Which university is located in Cambridge, Massachusetts?", options: ["Yale University", "Harvard University", "MIT", "Tufts University"], correctAnswer: "Harvard University"),
-//                TriviaQuestion(question: "Which school is located in Palo Alto, California?", options: ["UC Berkeley", "UCLA", "Stanford University", "Caltech"], correctAnswer: "Stanford University"),
-//                TriviaQuestion(question: "Which school is located in Ann Arbor, Michigan?", options: ["Michigan State University", "University of Michigan", "Wayne State University", "Purdue University"], correctAnswer: "University of Michigan"),
-//                TriviaQuestion(question: "Which university is located in Berkeley, California?", options: ["Stanford University", "UC Berkeley", "UCLA", "UC San Diego"], correctAnswer: "UC Berkeley")
-//            ]),
-//            TriviaSubcategory(name: "Cities", questions: [
-//                TriviaQuestion(question: "Which city is known as “The Big Apple”?", options: ["Los Angeles", "New York City", "Chicago", "Boston"], correctAnswer: "New York City"),
-//                TriviaQuestion(question: "What city is famous for its canals and gondolas?", options: ["Amsterdam", "Bruges", "Venice", "Stockholm"], correctAnswer: "Venice"),
-//                TriviaQuestion(question: "Which city is nicknamed“ The Windy City”?", options: ["Minneapolis", "San Francisco", "Chicago", "Detroit"], correctAnswer: "Detroit"),
-//                TriviaQuestion(question: "Which city was divided by a wall from 1961 to 1989?", options: ["Vienna", "Warsaw", "Prague", "Berlin"], correctAnswer: "Berlin")
-//            ])
-//        ]),
-//    // ------------------ Geography ------------------
-//        TriviaCategory(name: "Geography", imageName: "geographic", subcategories: [
-//            TriviaSubcategory(name: "Countries", questions: [
-//                TriviaQuestion(question: "Which country has the largest land area in the world?", options: ["Canada", "China", "United States", "Russia"], correctAnswer: "Russia"),
-//                TriviaQuestion(question: "What is the smallest country in the world by land area?", options: ["Monaco", "San Marino", "Vatican City", "Liechtenstein"], correctAnswer: "Vatican City"),
-//                TriviaQuestion(question: "Which country has the most time zones?", options: ["Russia", "United States", "France", "Australia"], correctAnswer: "France"),
-//                TriviaQuestion(question: "Which country contains the most lakes?", options: ["Finland", "Sweden", "Canada", "Norway"], correctAnswer: "Canada")
-//            ]),
-//            TriviaSubcategory(name: "States", questions: [
-//                TriviaQuestion(question: "Which U.S. state is the largest by land area?", options: ["Texas", "California", "Alaska", "Montana"], correctAnswer: "Alaska"),
-//                TriviaQuestion(question: "What is the smallest U.S. state by land area?", options: ["Delaware", "Rhode Island", "Connecticut", "New Jersey"], correctAnswer: "Rhode Island"),
-//                TriviaQuestion(question: "Which U.S. state is known as the “Sunshine State”?", options: ["California", "Arizona", "Florida", "Nevada"], correctAnswer: "Florida"),
-//                TriviaQuestion(question: "Which state was the last to join the United States?", options: ["Alaska", "Hawaii", "Arizona", "New Mexico"], correctAnswer: "Hawaii")
-//            ]),
-//            TriviaSubcategory(name: "Language", questions: [
-//                TriviaQuestion(question: "Which language has the most native speakers worldwide?", options: ["English", "Spanish", "Mandarin Chinese", "Hindi"], correctAnswer: "Mandarin Chinese"),
-//                TriviaQuestion(question: "Which country has the most official languages?", options: ["Canada", "India", "Switzerland", "South Africa"], correctAnswer: "South Africa"),
-//                TriviaQuestion(question: "What language is mainly spoken in Quebec, Canada?", options: ["English", "French", "Spanish", "German"], correctAnswer: "French"),
-//                TriviaQuestion(question: "What language family does English belong to?", options: ["Romance", "Slavic", "Germanic", "Celtic"], correctAnswer: "Germanic")
-//            ]),
-//            TriviaSubcategory(name: "Schools", questions: [
-//                TriviaQuestion(question: "Which university is located in Cambridge, Massachusetts?", options: ["Yale University", "Harvard University", "MIT", "Tufts University"], correctAnswer: "Harvard University"),
-//                TriviaQuestion(question: "Which school is located in Palo Alto, California?", options: ["UC Berkeley", "UCLA", "Stanford University", "Caltech"], correctAnswer: "Stanford University"),
-//                TriviaQuestion(question: "Which school is located in Ann Arbor, Michigan?", options: ["Michigan State University", "University of Michigan", "Wayne State University", "Purdue University"], correctAnswer: "University of Michigan"),
-//                TriviaQuestion(question: "Which university is located in Berkeley, California?", options: ["Stanford University", "UC Berkeley", "UCLA", "UC San Diego"], correctAnswer: "UC Berkeley")
-//            ]),
-//            TriviaSubcategory(name: "Cities", questions: [
-//                TriviaQuestion(question: "Which city is known as “The Big Apple”?", options: ["Los Angeles", "New York City", "Chicago", "Boston"], correctAnswer: "New York City"),
-//                TriviaQuestion(question: "What city is famous for its canals and gondolas?", options: ["Amsterdam", "Bruges", "Venice", "Stockholm"], correctAnswer: "Venice"),
-//                TriviaQuestion(question: "Which city is nicknamed“ The Windy City”?", options: ["Minneapolis", "San Francisco", "Chicago", "Detroit"], correctAnswer: "Detroit"),
-//                TriviaQuestion(question: "Which city was divided by a wall from 1961 to 1989?", options: ["Vienna", "Warsaw", "Prague", "Berlin"], correctAnswer: "Berlin")
-//            ])
-//        ])
-//
-//]
-//
-//
-//// @@@@@@@@@@@@@@@@@@@@@
-//// SUDDEN TRIVIA QUESTIONS
-//// @@@@@@@@@@@@@@@@@@@@@
-//
-//let suddenTriviaQuestions: [TriviaQuestion] = [
-//
-//    TriviaQuestion(
-//        question: "What planet is known as the Red Planet?",
-//        options: ["Red","Yellow","Green","Blue"],
-//        correctAnswer: "Red"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Live Aid was a benefit concert in 1985, played in London and Philadelphia simultaneously, which artist performed at both venues?",
-//        options: ["Phil Collins","Eric Clapton","David Bowie","Queen"],
-//        correctAnswer: "Phil Collins "
-//    ),
-//
-//    TriviaQuestion(
-//        question: "In 'Chinatown' (1974), what seemingly mundane item does Jake Gittes find in the saltwater pond that becomes a crucial piece of evidence? ",
-//        options: ["A watch","A pair of sunglasses","A wedding ring","A foundation pen"],
-//        correctAnswer: "A pair of sunglasses"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "What is the registry number of the USS Enterprise in “Star Trek: The Original Series”?",
-//        options: ["NCC-1701","NCC-1764","NCC-1031","NCC-74656"],
-//        correctAnswer: "NCC-1701"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "In the 1985 NBA Draft, who was selected before Michael Jordan?",
-//        options: ["Hakeem and Sam Bowie","Patrick Ewing and Chris Mullin","Charles Barkley and John Stockton","Karl Malone and Clyde Drexler"],
-//        correctAnswer: "Hakeem and Sam Bowie"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "What is Coca-Cola before food coloring is added?",
-//        options: ["Clear","Brown","Green","Yellow"],
-//        correctAnswer: "Yellow"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Why do teens often prefer texting over talking face-to-face?",
-//        options: ["It feels less emotionally intense","It’s faster","It gives them more control","All of the above"],
-//        correctAnswer: "All of the above"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which tool was so valuable in ancient times that it was sometimes buried?",
-//        options: ["Hammer","Chiesel","Axe","Saw"],
-//        correctAnswer: "Axe"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which Detroit landmark was the first major roadway in the worldb paved entirely with concrete?",
-//        options: ["Woodward Ave","efferson Avenue","Grand River Avenue","Michigan Ave"],
-//        correctAnswer: "Woodward Ave "
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Trivia: Which global company was nearly named “Cadabra” before changing its name?",
-//        options: ["Apple","Amazon","Alibaba","eBay"],
-//        correctAnswer: "Amazon"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which restaurant is famous for its endless pancakes promotion?",
-//        options: ["Denny’s","IHOP","Cracker Barrel","Perkins"],
-//        correctAnswer: "IHOP"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which fountain drink originated in Waco, Texas?",
-//        options: ["Dr Pepper","Big Red","Root Beer","Mr Pibb"],
-//        correctAnswer: " Dr Pepper"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which beer is known for its dark color and roasted flavor?",
-//        options: ["Pilsner","Lager","Stout","Wheat beer"],
-//        correctAnswer: "Stout"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "What fast-food chain is known for its “secret menu” animal-style items?",
-//        options: ["Five Guys","Shake Shack","In-N-Out Burger","Whataburger"],
-//        correctAnswer: "In-N-Out Burger"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which chocolate brand is known for producing ultra-luxury, hand crafted chocolates?",
-//        options: ["Lindt","Godiva","La Madeline au Truffe","Ferrero Rocher"],
-//        correctAnswer: "La Madeline au Truffe"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "What city is built on more than 100 islands connected by bridges?",
-//        options: ["Copenhagen","Helsinki","Stockholm","Oslo"],
-//        correctAnswer: "Stockholm"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which school is located in Ithaca, New York?",
-//        options: ["Syracuse University","University at Buffalo","Cornell University","Colgate University"],
-//        correctAnswer: "University at Buffalo"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Trivia: Which country is both in Europe and Asia?",
-//        options: ["Greece","Turkey","Italy","Bulgaria"],
-//        correctAnswer: "Turkey"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which U.S. state has the highest population?",
-//        options: ["Texas","New York","Florida","California"],
-//        correctAnswer: "California"
-//    ),
-//
-//    TriviaQuestion(
-//        question: "Which language is mainly spoken in South Korea?",
-//        options: ["Japanese","Mandarin","Korean","Vietnamese"],
-//        correctAnswer: "Korean"
-//    )
-//]
-// 
